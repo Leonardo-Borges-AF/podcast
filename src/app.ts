@@ -1,6 +1,7 @@
 import * as http from "http";
 
 import {
+  getFilterByVideoId,
   getFilterEpisodes,
   getListEpisodes,
 } from "./contollers/podcast-controller";
@@ -13,10 +14,13 @@ export const app = async (
 ) => {
   const baseUrl = req.url?.split("?")[0];
 
-  if (req.method === HttpMethod.GET && req.url === Routes.LIST) {
+  if (req.method === HttpMethod.GET && baseUrl === Routes.LIST) {
     await getListEpisodes(req, res);
   }
   if (req.method === HttpMethod.GET && baseUrl === Routes.EPISODE) {
     await getFilterEpisodes(req, res);
+  }
+  if (req.method === HttpMethod.GET && baseUrl === Routes.VideoId) {
+    await getFilterByVideoId(req, res);
   }
 };

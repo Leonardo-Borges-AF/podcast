@@ -94,29 +94,23 @@ A API retorna informações sobre episódios, incluindo nome do podcast, título
 
 ## ▶️ Como rodar o projeto
 
-1. Clone este repositório:
-
-   ```bash
-   git clone https://github.com/seuusuario/podcast-api.git
-   ```
-
-2. Instale as dependências:
+1. Instale as dependências:
 
    ```bash
    npm install
    ```
 
-3. Rode o servidor:
+2. Rode o servidor:
 
    ```bash
    npm run dev
    ```
 
-4. Acesse a API:
+3. Acesse a API:
 
-   - `http://localhost:3000/episodes`
-   - `http://localhost:3000/episode?podcastName=flow`
-   - `http://localhost:3000/episode?category=politica`
+   - `http://localhost:3000`
+   - `http://localhost:3000/api/podcasts?p=flow`
+   - `http://localhost:3000/api/videoId?v=123`
 
 ---
 
